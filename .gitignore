@@ -1,0 +1,8 @@
+/.venv
+/.idea
+
+/lib
+/lib__
+
+emnist_letters-aaaaaa.h5
+emnist_letters_old.h5
