@@ -116,12 +116,14 @@ def emnist_model():
 def emnist_train(model):
     t_start = time.time()
 
-    emnist_path = 'D:\\Projects\\ozn\\lib\\emnist_source_files\\'
-    X_train = idx2numpy.convert_from_file(emnist_path + 'emnist-byclass-train-images-idx3-ubyte')
-    y_train = idx2numpy.convert_from_file(emnist_path + 'emnist-byclass-train-labels-idx1-ubyte')
+    # emnist_path = 'D:\\Projects\\ozn\\lib\\emnist_source_files\\'
+    # X_train = idx2numpy.convert_from_file(emnist_path + 'emnist-byclass-train-images-idx3-ubyte')
+    # y_train = idx2numpy.convert_from_file(emnist_path + 'emnist-byclass-train-labels-idx1-ubyte')
+    #
+    # X_test = idx2numpy.convert_from_file(emnist_path + 'emnist-byclass-test-images-idx3-ubyte')
+    # y_test = idx2numpy.convert_from_file(emnist_path + 'emnist-byclass-test-labels-idx1-ubyte')
 
-    X_test = idx2numpy.convert_from_file(emnist_path + 'emnist-byclass-test-images-idx3-ubyte')
-    y_test = idx2numpy.convert_from_file(emnist_path + 'emnist-byclass-test-labels-idx1-ubyte')
+    (X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
 
     X_train = np.reshape(X_train, (X_train.shape[0], 28, 28, 1))
     X_test = np.reshape(X_test, (X_test.shape[0], 28, 28, 1))
