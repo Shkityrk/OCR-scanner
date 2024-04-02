@@ -22,9 +22,9 @@ from keras.optimizers import SGD, RMSprop, Adam
 from keras import backend as K
 
 import tensorflow as tf
-from scipy import io as spio
-import idx2numpy  # sudo pip3 install idx2numpy
-from matplotlib import pyplot as plt
+# from scipy import io as spio
+# import idx2numpy  # sudo pip3 install idx2numpy
+# from matplotlib import pyplot as plt
 from typing import *
 import time
 
